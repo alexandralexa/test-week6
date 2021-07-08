@@ -133,7 +133,25 @@ body {
 
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (min-width: 400px) and (max-width: 599px) {
+    .footer {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        height: 90vh;
+        width: 100vw;
+        grid-template-rows: 25% 1fr;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "header header"
+            "main seidbar";
+    }
+
+}
+
+@media screen and (max-width: 399px) {
     .footer {
         display: none;
     }
