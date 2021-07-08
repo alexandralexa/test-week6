@@ -48,15 +48,7 @@ body {
     gap: 5px;
 }
 
-.container {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 10% 1fr 10%;
-    grid-template-areas:
-        "header header  header header"
-        "main main main seidbar"
-        "footer footer footer footer";
-}
+
 
 .content {
     display: grid;
@@ -115,4 +107,51 @@ body {
 .foot_4 {
     grid-area: foot_4;
     background-color: white;
+}
+
+@media screen and (min-width: 600px) {
+    .footer {
+        background-color: rgba(68, 71, 71, 0.5);
+        grid-area: footer;
+        text-align: center;
+        display: grid;
+        margin: 5px;
+        padding: 5px;
+        height: 100%;
+        gap: 5px;
+    }
+
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 10% 1fr 10%;
+        grid-template-areas:
+            "header header  header header"
+            "main main main seidbar"
+            "footer footer footer footer";
+    }
+
+}
+
+@media screen and (max-width: 599px) {
+    .footer {
+        display: none;
+    }
+
+    .main {
+        height: 33vh;
+        display: grid;
+    }
+
+    .content {
+        height: 100%;
+    }
+
+    .seidbar {
+        height: 33vh;
+    }
+
+    .header {
+        height: 33vh;
+    }
 }
